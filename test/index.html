@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-3.4.1.min.js"></script>
+      <!-- <script>
+            jQuery(document).ready(function(){
+                jQuery('.btn1').click(function(){
+                     $('.btn1').css('background-color','yellow');
+                     alert('OK');
+                });
+            });
+        </script>
+        <script>
+            $(document).ready(function(){
+                var btn1 = $('.btn1')
+                btn1.click(function(){
+                    btn1.css('background-color','red');
+                })
+            })
+        </script>  -->
+         <!-- <script>
+            $(document).ready(function(){
+                $('#div1').html("Width:"+$('.img1').width() + ". Height " + $('.img1').height());
+                alert($('div').html());
+                alert($('div').text());
+            });
+        </script> -->
+        <!-- <script>
+            $(document).ready(function(){
+                // $('table tr td:even').css('background-color','grey');
+                // $('table tr td:odd').css('background-color','red');
+                $('table tr:last').each(function(){
+                    // if($(this).find('td:first').text()=='Henshin1')
+                    //     alert($(this).html());
+                    // else
+                    //     alert($(this).hmtl());
+                    alert($(this).val());
+                })
+            })
+        </script> -->
+        <!-- <script>
+            $(document).ready(function(){
+                $('table').click(function(){
+                    $('td').css('background-color','pink');
+                });
+            });
+        </script> -->
+        <!-- <script>
+            $(document).ready(function(){
+                alert($('tr td:last').addClass('abc'));
+            })
+        </script> -->
+        <!-- <script>
+            $(document).ready(function(){
+                $('.btn1').click(function(){
+                    $('#lb1').text('Click here');
+                })
+                $('.btn2').click(function(){
+                    alert('Danger');
+                })
+                $('.btn3').click(function(){
+                    $('#lb1').attr('style','color:red');
+                    $('#txt').val(123);
+                })
+            })
+        </script> -->
+        <!-- <script>
+            $(document).ready(function(){
+                $('.btn1').click(function(){
+                    $('#link1').attr('href','http://google.com');
+                    alert($('#link1').attr('href'));
+                });
+            });
+        </script> -->
+        <!-- <script>
+            $(document).ready(function(){
+                $('#btnSubmit').click(function(){
+                    var boxChecked = $('input[type="checkbox"][name = "skills"]:checked');
+                    if(boxChecked.length>0)
+                    {
+                        $('#divResult').html(boxChecked.length + "checkbox(s) selected <br>");
+                        boxChecked.each(function(){
+                            $('#divResult').append($(this).val() + "<br>");
+                        })
+                    }
+                    else
+                    {
+                        $('#divResult').text('No checkbox checked');
+                    }
+                })
+            })
+        </script> -->
+        <script>
+            $(document).ready(function(){
+                $('#btnSubmit').click(function(){
+                    var selected = $('#ddlSkills option:selected');
+                    if(selected.length>0)
+                    {
+                        var result = '';
+                        selected.each(function(){
+                            result += 'Value:' + $(this).val() + '.Text:' + $(this).text() +"<br>"
+                        });
+                        $('#divResult').html(result);
+                    }
+                    else
+                    {
+                        $('#divResult').html(result);
+                    }
+                });
+            });
+        </script>
+</head>
+<body>
+    <!-- <a href="#" id="link1">Link 1</a>
+    <br>
+    <button class="btn1">Submit</button>
+    <button class="btn2">Submit p2</button>
+    <button class="btn3">Change color</button>
+    <br>
+    <label id="lb1"></label>
+    <input type="text" id="txt">
+    
+    <div id="div1">
+    </div>
+    <table id="table1" border="1px">
+        <tr>
+            <td>Henshin</td>
+            <td>Alo</td>
+            <td>hello</td>
+        </tr>
+        <tr>
+            <td>Hi</td>
+            <td>Bongjua</td>
+            <td>Ni hao</td>
+        </tr>
+        <tr>
+                <td>Hi</td>
+                <td>Bongjua</td>
+                <td>Ni hao</td>
+            </tr>
+    </table> -->
+    <!-- <img class="img1" src="img/anhdep.jpg">    -->
+    <!-- <label for=""><input type="radio" name="gender" value="1">Nam</label>
+    <label for=""><input type="radio" name="gender" value="0">Nu</label>
+    
+    <br>
+    <input type="button" name="Submit" id="btnSubmit" value="submit">
+    <div id="divResult"></div>
+     -->
+    <!-- <label for=""><input type="checkbox" value="C#" name="skills" >C#</label>
+    <label for=""><input type="checkbox" value="Java" name="skills">Java</label>
+    <label for=""><input type="checkbox" value="PHP" name="skills">PHP</label>
+    <label for=""><input type="checkbox" value="C++" name="skills">C++</label>
+    
+    <br>
+    <input type="button" name="Submit" id="btnSubmit" value="submit">
+    <div id="divResult"></div> -->
+
+        <select name="" id="ddlSkills" multiple>
+            <option value="disable">Mời bạn chọn</option>
+            <option value="C#">C#</option>
+            <option value="Java">Java</option>
+            <option value="PHP">PHP</option>
+            <option value="C++">C++</option>
+            <option value="Python">Python</option>
+        </select>
+        <input type="button" id="btnSubmit" value="Submit">
+        <div id="divResult"></div>
+</body>
+</html>

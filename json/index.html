@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var employeeJson = [{
+                "firstname":"Hoang",
+                "lastname":"Tan",
+                "email":"tanhaudue@gmail.com",
+                "age":19
+            },
+            {
+                "firstname":"Hoang",
+                "lastname":"Khang",
+                "email":"khanghaudue@gmail.com",
+                "age":12
+            }];
+            // var result = '';
+            // $.each($(employeeJson),function(i,item){
+            //     result += "firstname:" + item.firstname +"-lastname:" + item.lastname 
+            //         + "-email:" +item.email +"-age:" +item.age + "<br>" ;
+            // });
+            $('#result').html(JSON.stringify(employeeJson));
+            var content = $('#result').html();
+            var objectJson = JSON.parse(content);
+            console.log(objectJson);
+        });
+    </script>
+</head>
+<body>
+    <div id="result"></div>
+</body>
+</html>

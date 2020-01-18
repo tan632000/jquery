@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // var result = '';
+            // $('li').each(function(index,element){
+            //     result += $(this).text()+'<br>';
+            // });
+            // $('#result').html(result);
+
+
+            // method chaining
+            $('li').css('color','green').slideUp(1000).slideDown(1000).attr('title','ok');
+        });
+    </script>
+</head>
+<body>
+    <ul>
+        <li>USA</li>
+        <li>England</li>
+        <li>Việt Nam</li>
+        <li>Nga</li>
+        <li>Thái Lan</li>
+    </ul>
+
+    <br>
+    <div id="result"></div>
+</body>
+</html>

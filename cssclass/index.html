@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-3.4.1.min.js"></script>
+    <style>
+        .color{
+            color: red;
+        }
+        .italic{
+            font-weight: inherit;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $('#addcolor').on('click',function(){
+                $('h1').addClass('color');
+            });
+            $('#removecolor').on('click',function(){
+                $('h1').removeClass('color');
+            });
+            $('#togglecolor').on('click',function(){
+                $('h1').toggleClass('color');
+            });
+            $('#bold').on('click',function(){
+                $('h1').addClass('italic');
+            });
+            $('#removebold').on('click',function(){
+                $('h1').removeClass('italic');
+            });
+            $('#toggleinherit').on('click',function(){
+                $('h1').toggleClass('italic');
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Trang béo k chịu ngủ</h1>
+    <br>
+    <button id="addcolor">AddColor</button>
+    <button id="removecolor">RemoveColor</button>
+    <button id="togglecolor">ToggleColor</button>
+    <button id="bold">inherit</button>
+    <button id="removebold">removeinherit</button>
+    <button id="toggleinherit">ToggleInherit</button>
+</body>
+</html>
